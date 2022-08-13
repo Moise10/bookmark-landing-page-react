@@ -1,0 +1,60 @@
+
+
+.hero__title, .text {
+  text-align: center;
+}
+
+.btn__flex {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+
+}
+
+.hero__left {
+  order: 2;
+  margin-top: 1.5rem;
+}
+
+.hero__right {
+  order: 1;
+}
+
+.btn {
+  background-color: hsl(231, 69%, 60%) !important;
+
+}
+
+.hero__container{
+  margin-bottom: 6rem;
+}
+
+.btn__firefox{
+  background-color: rgb(241, 241, 241) !important;
+  color: black !important;
+}
+
+@media (min-width: 768px) {
+  .hero__container{
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem
+  }
+  .hero__right{
+    order: 2;
+  }
+
+  .hero__right > img {
+    width: 100%
+  }
+
+  .hero__left {
+    order: 1;
+}
+  .hero__left > p, .hero__left > h1 {
+    text-align: left;
+}
+
+}

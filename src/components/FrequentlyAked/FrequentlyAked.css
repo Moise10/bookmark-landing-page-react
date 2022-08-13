@@ -1,0 +1,36 @@
+.heading__faq, .text {
+  text-align: center;
+  font-family: 'Rubik', 'sans-serif';
+}
+
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  color: lightgray;
+  margin-bottom: 4rem;
+}
+
+
+.btn__fqa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.btn__fqa > button {
+  max-width: 300px;
+  margin-top: 2rem;
+  padding: .8rem 2rem;
+  border: none;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  border-radius: 5px;
+}
+
+@media  (min-width: 768px){
+  .fqa {
+  max-width: 500px;
+  margin: 0 auto;
+}
+}

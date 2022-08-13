@@ -1,0 +1,43 @@
+.features_header, .simple__description {
+  text-align: center;
+}
+
+.features__display {
+  margin-top: 6rem;
+}
+
+.simple__description{
+  font-size: .8rem;
+  text-align: center;
+}
+
+.simple__description > h1 {
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .tags{
+    display: flex;
+    gap: 2rem
+  }
+  .simpleBooking__container{
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 2rem
+  }
+
+  .simple__description > * {
+    text-align: left;
+
+  }
+
+  .simple__img{
+    flex: 0.6
+  }
+
+  .simple__description{
+    flex: 0.4
+  }
+}
+

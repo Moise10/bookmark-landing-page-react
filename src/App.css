@@ -1,0 +1,20 @@
+.app__body {
+  margin: 0 1rem;
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.app{
+  
+}
+
+@media (min-width: 768px) {
+  .app__body{
+    padding: 0 3rem;
+  }
+}
+
+
+
+

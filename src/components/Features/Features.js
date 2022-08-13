@@ -4,21 +4,33 @@ import './Features.css'
 import Tab_1 from '../../images/illustration-features-tab-1.svg'
 import Tab_2 from '../../images/illustration-features-tab-2.svg'
 import Tab_3 from '../../images/illustration-features-tab-3.svg'
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
 
 function Features() {
+
   const features = ['Simple Bookmarking', 'Speedy Searching', 'Easy Sharing']
   const title = ['Bookmark in one click', 'Intelligent Search', 'Share your Bookmark']
 
   const text = ['Organize your bookmarks however you like. our simple drag-and-drop interface gives you complete control over how you manage your favorite sites', 'Our powerfull search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.', 'Easily share your bookmarks and collections with others.Create a shareable link that you can send at the click of a button ']
 
 
-  const [selected, setSelected] = useState(false)
   const [selection, setSelection] = useState('')
+	const [selected, setSelected] = useState(false);
+
 
   const select = () => {
     setSelected(prev => !prev)
   }
+
+	const settingFeatures = (feature) => {
+		if(selection){
+			setSelected(prev => !prev)
+		}
+		setSelection(feature)
+	}
 
 
   return (
@@ -34,9 +46,15 @@ function Features() {
 			<div className="features__tags">
 				<div className="tags">
 					{features.map((feature) => (
-						<Button 
-            style={{width:'100%'}}
-            onClick={() => setSelection(feature)} key={feature}>
+						<Button
+							style={{
+								width: '100%',
+								borderBottom: '2px solid hsl(0, 94%, 66%)',
+								borderRadius: 0,
+							}}
+							onClick={() => settingFeatures(feature)}
+							key={feature}
+						>
 							{feature}
 						</Button>
 					))}
@@ -72,7 +90,8 @@ const Simple = ({src, title, text}) => {
 			<div className="simple__description">
 				<h1>{title}</h1>
 				<p className="text">{text}</p>
-				<Button color="primary" size="small">
+				<Button
+				color="primary" size="small">
 					More Info
 				</Button>
 			</div>

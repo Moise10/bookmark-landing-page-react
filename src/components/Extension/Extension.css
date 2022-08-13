@@ -1,0 +1,23 @@
+
+.card_title, .text{
+  text-align: center;
+}
+.extension{
+  margin-bottom: 6rem;
+
+}
+
+
+@media (min-width: 468px) {
+  .extension{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+
+}
+
