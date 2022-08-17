@@ -26,9 +26,7 @@ function Features() {
   }
 
 	const settingFeatures = (feature) => {
-		if(selection){
-			setSelected(prev => !prev)
-		}
+		
 		setSelection(feature)
 	}
 
@@ -37,7 +35,7 @@ function Features() {
 		<div className="features">
 			<div className="features_header">
 				<h1 className="features_title">Features</h1>
-				<p className="text">
+				<p className="text text-width">
 					Our aim is to kame it quick and easy for you to access your favorite
 					websites.Your bookmarks sync between your devices so you can access
 					them on the go.
@@ -49,7 +47,6 @@ function Features() {
 						<Button
 							style={{
 								width: '100%',
-								borderBottom: '2px solid hsl(0, 94%, 66%)',
 								borderRadius: 0,
 							}}
 							onClick={() => settingFeatures(feature)}
@@ -89,8 +86,8 @@ const Simple = ({src, title, text}) => {
 			</div>
 			<div className="simple__description">
 				<h1>{title}</h1>
-				<p className="text">{text}</p>
-				<Button
+				<p className="text__left">{text}</p>
+				<Button className="simple__btn"
 				color="primary" size="small">
 					More Info
 				</Button>

@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import './Hero.css'
 import Bookmark from '../../images/illustration-hero.svg'
 import './Hero.css'
+import  Dots from '../../images/bg-dots.svg'
 
 function Hero() {
   return (
@@ -13,7 +14,7 @@ function Hero() {
 
 			<div className="hero__left">
 				<h1 className="hero__title">A Simple Bookmark Manager</h1>
-				<p className="text">
+				<p className="hero__text">
 					A clean and simple interface to organize your favorite websites.Open a
 					new browser tab and see your sites load instantly. Try it fro free
 				</p>

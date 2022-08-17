@@ -40,15 +40,15 @@ function Extension() {
 		<div>
 			<div className="card__header">
 				<h1 className="card_title">Download the extension</h1>
-				<p className="text">
+				<p className="text text-width">
 					We've got more browsers in the pipeline. Please do le us know if
 					you've got a favourite you'd like us to prioritize
 				</p>
 			</div>
-			<div 
-      className="extension">
-        {items.map(item => <CardItem key={item} item={item} />
-        )}
+			<div className="extension">
+				{items.map((item) => (
+					<CardItem key={item} item={item} />
+				))}
 			</div>
 		</div>
 	);

@@ -4,11 +4,10 @@
 }
 .extension{
   margin-bottom: 6rem;
-
 }
 
 
-@media (min-width: 468px) {
+@media (min-width: 600px) {
   .extension{
   display: flex;
   justify-content: center;
@@ -17,6 +16,10 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
+
+.text-width{
+    padding: 0 8rem;
+  }
 
 
 }

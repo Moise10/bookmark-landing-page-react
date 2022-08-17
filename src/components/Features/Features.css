@@ -15,6 +15,14 @@
   margin: 1rem 0;
 }
 
+.simple__btn {
+  background-color: hsl(231, 69%, 60%)
+  !important; 
+  color: whitesmoke!important;
+  font-size: .6rem !important;
+  padding: .4rem 1.4rem !important;
+}
+
 @media (min-width: 768px) {
   .tags{
     display: flex;
@@ -22,14 +30,23 @@
   }
   .simpleBooking__container{
     display: flex !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    gap: 2rem
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 6rem;
   }
 
-  .simple__description > * {
-    text-align: left;
+  .simple__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start
+  }
 
+  .text__left {
+    text-align: left;
+    margin-bottom: 1rem;
+    color: hsl(229, 8%, 60%)
   }
 
   .simple__img{
@@ -38,6 +55,10 @@
 
   .simple__description{
     flex: 0.4
+  }
+
+  .text-width{
+    padding: 0 8rem;
   }
 }
 

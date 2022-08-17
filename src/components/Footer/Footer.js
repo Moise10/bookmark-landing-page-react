@@ -16,7 +16,7 @@ function Footer() {
   return (
 		<div className="footer__container">
 			<div className="footer">
-				<div className="footer__top-container">
+				<div className="footer__top__container">
 					<div className="footer__top">
 						<p className="footer__header">35,000+ Already Joined</p>
 						<h2 className="footer_secondary">
@@ -24,16 +24,16 @@ function Footer() {
 						</h2>
 						<form action="">
 							<input type="email" placeholder="Enter your Email address" />
-							<Button className="btn" variant="contained">
+							<Button className="footer__btn" variant="contained">
 								Contact Us
 							</Button>
 						</form>
 					</div>
 				</div>
-				<div className="footer__nav-container">
+				<div className="footer__nav__container">
 					<div className="footer__nav">
 						<div className="footer__nav-tags">
-							<img src={Logo} alt="" />
+							<img src={Logo} className="footer__logo" alt="" />
 							<nav className="nav">
 								<ul className="nav__lists">
 									<li className="nav__link">

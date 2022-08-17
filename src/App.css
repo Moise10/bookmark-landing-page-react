@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .app__body {
   margin: 0 1rem;
   font-size: 18px;
@@ -5,9 +11,6 @@
   margin: 0 auto;
 }
 
-.app{
-  
-}
 
 @media (min-width: 768px) {
   .app__body{

@@ -1,0 +1,101 @@
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.header__lists{
+  display: flex;
+  list-style: none;
+  gap: 1.6rem;
+
+}
+
+.header__lists li {
+  position: relative;
+  padding: 5px 15px;
+  
+}
+
+.header__list a {
+  text-decoration: none;
+  color: black;
+}
+
+.header__list a:hover, .header__list a.active {
+  color: #17cf97;
+}
+
+.header__list a:hover::after, 
+.header__list a.active::after{
+  content: " ";
+  width: 40%;
+  height: 2px;
+  background: #17cf97;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+} 
+
+.MuiSvgIcon-root {
+  color: black;
+}
+
+
+
+.mobile {
+  display: none
+}
+
+@media screen and (max-width: 769px) {
+
+  .header__lists{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.879);
+    box-shadow: 0 40px 60px rgba(0, 0 , 0 , 0.1);
+    padding: 100px  0 0 0;
+    transition: 0.2s ease-in-out;
+    z-index: 5;
+  }
+
+  
+
+  .header__lists.active {
+  width: 0;
+  display: none
+}
+
+.header__lists li {
+  margin-bottom: 15px;
+}
+
+.header__list a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+  .mobile {
+  display: block;
+  z-index: 10;
+  padding-right: 20px;
+  position: fixed;
+  right: 0
+
+}
+
+.MuiSvgIcon-root {
+  color: whitesmoke;
+}
+
+.menu__icon{
+  color:black!important;
+}
+
+}
