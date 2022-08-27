@@ -18,16 +18,16 @@ function Features() {
 
 
   const [selection, setSelection] = useState('')
-	const [selected, setSelected] = useState(false);
+	const [active, setActive] = useState(false);
 
 
   const select = () => {
-    setSelected(prev => !prev)
+    ;
   }
 
 	const settingFeatures = (feature) => {
-		
 		setSelection(feature)
+		setActive(true);
 	}
 
 
@@ -49,6 +49,7 @@ function Features() {
 								width: '100%',
 								borderRadius: 0,
 							}}
+							className={active && 'active'}
 							onClick={() => settingFeatures(feature)}
 							key={feature}
 						>
@@ -97,3 +98,5 @@ const Simple = ({src, title, text}) => {
 }
 
 export default Features
+
+

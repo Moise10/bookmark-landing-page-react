@@ -1,13 +1,8 @@
-import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Button } from '@mui/material';
-import Question from './Question';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import './FrequentlyAked.css';
+import * as React from 'react'
+import Question from './Question'
+import './FrequentlyAked.css'
+import styled from 'styled-components'
+
 
 
 export default function SimpleAccordion() {
@@ -25,24 +20,51 @@ export default function SimpleAccordion() {
 
 
 	return (
-		<div className="fqa">
-			<h1 className="heading__faq">Frequently Asked Questions</h1>
-			<p className="text">
+		<Container>
+			<h1>Frequently Asked Questions</h1>
+			<p>
 				Here are some of our FAQs.If you have any other questions you'd like
 				answered please feel free to email us
 			</p>
-			{Questions.map((question) => (
-				<Question
-					key={question.text}
-					text={question.text}
-					title={question.title}
-					ExpandMore={<ExpandMoreIcon />}
-					ExpandLess={<ExpandLessIcon />}
-				/>
-			))}
-			<div className="btn__fqa">
-				<button className="">More Info</button>
-			</div>
-		</div>
+			<Flex>
+				{Questions.map((question) => (
+					<Question
+						key={question.text}
+						text={question.text}
+						title={question.title}
+					/>
+				))}
+			</Flex>
+			<Button>More Info</Button>
+		</Container>
 	);
 }
+
+const Flex = styled.div`
+  display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin: 3rem 0;
+`
+
+
+const Container = styled.div`
+	padding: 2rem;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+`;
+
+const Button = styled.button`
+	display: inline-block;
+	padding: 1em 1.5em;
+	font-size: 0.625rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 1px;
+	border: 0;
+	cursor: pointer;
+	background-color: blue;
+	color: #fff;
+	margin: 0 auto;
+`;

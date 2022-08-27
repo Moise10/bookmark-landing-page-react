@@ -1,33 +1,67 @@
-import React, {useState} from 'react'
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Button } from '@mui/material';
-import './Question.css'
+import React, { useState } from 'react';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import styled from 'styled-components'
 
-function Question({ ExpandMore, ExpandLess, title, text }) {
-  const {expand, setExpand} = useState(false)
 
+const Question = ({ text, title }) => {
+	const [showInfo, setShowInfo] = useState(false);
 	return (
-		<div>
-			<Accordion>
-				<AccordionSummary
-					expandIcon={<ExpandMoreIcon />}
-					aria-controls="panel1a-content"
-					id="panel1a-header"
-				>
-					<Typography>{title}</Typography>
-				</AccordionSummary>
-				<AccordionDetails>
-					<Typography>
-						{text}
-					</Typography>
-				</AccordionDetails>
-			</Accordion>
-		</div>
+		<Article>
+			<Header>
+				<h4>{title}</h4>
+				<button onClick={() => setShowInfo(!showInfo)}>
+					{showInfo ? (
+						<KeyboardArrowUpIcon className="down" />
+					) : (
+						<KeyboardArrowDownIcon />
+					)}
+				</button>
+			</Header>
+			{showInfo && <p>{text}</p>}
+		</Article>
 	);
-}
+};
 
-export default Question
+
+
+
+const Article = styled.article`
+
+  p {
+		text-align: left;
+		font-size: .9rem;
+	}
+  
+`
+
+const Header = styled.header`
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #ccc;
+	padding: 1.2rem 0 0.5rem 0;
+
+	h4 {
+		font-weight: 500;
+		&:hover {
+			color: #fa5959;
+		}
+	}
+
+	button {
+		border: none;
+		padding: 5px;
+		background-color: #fff;
+
+		.css-i4bv87-MuiSvgIcon-root {
+			color: #5267df;
+		}
+
+		.down {
+			color: #fa5959 !important;
+		}
+	}
+`;
+
+
+export default Question;
