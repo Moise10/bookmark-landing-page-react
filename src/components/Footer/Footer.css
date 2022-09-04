@@ -3,6 +3,8 @@
   max-width: 100%;
 }
 
+
+
 .footer__top__container{
   height: auto;
   background-color: hsl(231, 69%, 60%);
@@ -69,18 +71,25 @@ form > input::placeholder{
 }
 
 .footer__nav__container{
-  min-height: 6rem;
+  min-height: 8rem;
   background-color: hsl(229, 31%, 21%);
   padding-bottom: 3rem;
 }
 
-.footer__nav {
+.footer__nav, .nav__lists {
   text-align: center;
 }
 
-.footer__icons{
-  color: #fff;
+.footer_nav {
+  max-width: 900px;
+  margin: 0 auto;
 }
+
+
+
+.icon-footer{
+    color: #fff;
+  }
 
 .nav__link{
   margin-bottom: 1.3rem;
@@ -99,22 +108,49 @@ form > input::placeholder{
 
 .nav__lists{
   list-style: none;
+  display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.footer__nav-tags{
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-@media (min-width: 960px){
+/* svg{
+  font-size: 5rem;
+  color: white;
+} */
 
-  .footer__nav__container{
-    padding: 0 8rem;
-
+.footer__icons{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 
+@media (min-width: 960px) {
+  .footer__nav__container{
+    padding: 0 8rem;
+  }
+
+  .nav {
+  margin-top: 0;
+}
+
   .footer__nav-tags{
-    padding-bottom: 0rem;
-    display: flex;
+    padding: 3rem 0px;
+
     align-items: center;
-    gap: 1rem;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
   }
 
   .svg {
@@ -122,7 +158,7 @@ form > input::placeholder{
     height: 3rem;
 }
 
-  .footer__nav, .footer__nav-tags{
+  .footer__nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -132,16 +168,23 @@ form > input::placeholder{
     display: flex;
     margin-bottom: 0;
     gap: 1.6rem;
+    flex-direction: row;
   }
 
   .footer__icons{
     margin-bottom: 0;
     display: flex;
     gap: 2rem;
+    padding: 3rem 0px;
+    align-self: center;
+
   }
 
   .icon-footer{
-    color: #fff;
+    color: white;
+    padding: 0;
+
+
   }
 
   .icon-footer:hover {

@@ -20,7 +20,7 @@ export default function SimpleAccordion() {
 
 
 	return (
-		<Container>
+		<Container id="contact">
 			<h1>Frequently Asked Questions</h1>
 			<p>
 				Here are some of our FAQs.If you have any other questions you'd like

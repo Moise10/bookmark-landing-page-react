@@ -7,6 +7,7 @@ import Tab_3 from '../../images/illustration-features-tab-3.svg'
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import {NavLink} from 'react-router-dom'
 
 
 function Features() {
@@ -21,9 +22,7 @@ function Features() {
 	const [active, setActive] = useState(false);
 
 
-  const select = () => {
-    ;
-  }
+  
 
 	const settingFeatures = (feature) => {
 		setSelection(feature)
@@ -32,7 +31,7 @@ function Features() {
 
 
   return (
-		<div className="features">
+		<div className="features" id="features" style={{padding:'2rem'}}>
 			<div className="features_header">
 				<h1 className="features_title">Features</h1>
 				<p className="text text-width">
@@ -49,7 +48,7 @@ function Features() {
 								width: '100%',
 								borderRadius: 0,
 							}}
-							className={active && 'active'}
+							
 							onClick={() => settingFeatures(feature)}
 							key={feature}
 						>
@@ -87,7 +86,7 @@ const Simple = ({src, title, text}) => {
 			</div>
 			<div className="simple__description">
 				<h1>{title}</h1>
-				<p className="text__left">{text}</p>
+				<p className="text__left" >{text}</p>
 				<Button className="simple__btn"
 				color="primary" size="small">
 					More Info

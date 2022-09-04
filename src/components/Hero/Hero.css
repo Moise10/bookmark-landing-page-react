@@ -8,6 +8,7 @@
   display: flex;
   gap: 0.5em;
   justify-content: center;
+  
 }
 
 .hero__title, .hero__text {
@@ -45,13 +46,18 @@
   color: black !important;
 }
 
+.hero__container{
+  padding: 1rem;
+}
+
 @media (min-width: 690px) {
   .hero__container{
     max-width: 1000px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
   }
   .hero__right{
     order: 2;
@@ -63,6 +69,7 @@
 
   .hero__left {
     order: 1;
+    margin-top: 0;
 }
   .hero__left > p, .hero__left > h1 {
     text-align: left;

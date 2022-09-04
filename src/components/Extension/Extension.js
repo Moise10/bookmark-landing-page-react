@@ -37,7 +37,7 @@ function Extension() {
   
 	
 	return (
-		<div>
+		<div id="extensions" style={{ padding: '2rem'}}>
 			<div className="card__header">
 				<h1 className="card_title">Download the extension</h1>
 				<p className="text text-width">
